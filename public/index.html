@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estates</title>
+  <link rel="icon" href="assets/pieces/house.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <section id="setup" class="setup">
+      <h1>Estates</h1>
+      <p class="tag">Buy streets in Port Meridian, build, and bankrupt your rivals.</p>
+      <div id="seats"></div>
+      <div class="row">
+        <button id="addSeat" type="button">Add player</button>
+        <label>Seed <input id="seed" type="number" value="1" min="0"></label>
+      </div>
+      <div class="row">
+        <button id="start" class="primary" type="button">Start game</button>
+        <button id="resume" type="button" hidden>Resume saved game</button>
+      </div>
+    </section>
+
+    <section id="game" class="game" hidden>
+      <div id="board" class="board">
+        <div class="centre">
+          <div class="title">Estates</div>
+          <div class="dice"><img id="die0" alt=""><img id="die1" alt=""></div>
+          <div id="status" class="status"></div>
+          <div id="actions" class="actions"></div>
+          <div id="cardText" class="card-text" hidden></div>
+        </div>
+      </div>
+      <aside class="side">
+        <div id="players"></div>
+        <div class="tools">
+          <button id="mute" type="button" title="Sound"><img src="assets/icons/audioOn.png" alt="Sound on"></button>
+          <button id="download" type="button">Save record</button>
+          <button id="newGame" type="button">New game</button>
+        </div>
+        <ol id="log" class="log"></ol>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="dist/src/client/main.js"></script>
+</body>
+</html>
